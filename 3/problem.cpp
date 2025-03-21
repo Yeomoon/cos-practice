@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
 // professor code
 // {
 //     int first, second, sum;
