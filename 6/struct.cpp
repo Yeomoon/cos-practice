@@ -2,19 +2,22 @@
 #include <cstdlib>
 using namespace std;
 
-typedef struct human_st {
+struct human_st {
     const char *name;
     int age;
-    int gender;
-} human;
+    int gender; // 0 for a man, 1 for a woman
+};
 
 int main(int argc, char *argv[]){
-    human *hw;
-    hw = (human *)malloc(sizeof(human));
+    struct human_st *hw;
+
+    hw = (struct human_st *)malloc(sizeof(struct human_st));
     hw->name = "Hyunwoo";
-    hw-> age = 39;
+    hw->age = 38;
     hw->gender = 0;
 
-    cout << "name: " << hw->name << "age: " << hw->age << "gender: " << hw->gender << endl;
+    cout << "name: "<< hw->name << " age: " << hw->age 
+	<< " gender: " << hw->gender << endl;
+
     return 0;
-} 
+}
